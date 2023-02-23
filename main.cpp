@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
-
+#include <iomanip>
 using namespace std;
 
 int getSum(vector<int> myVector);
-
+float getAverage(vector<int> myVector);
 int main()
 {
     vector<int> toBePassedVector ;
@@ -14,6 +14,9 @@ int main()
      }
      int sumOfTheVector=getSum(toBePassedVector);
      cout << "the sum of the vector is " << sumOfTheVector <<endl;
+     float averageOfTheVector= getAverage(toBePassedVector);
+    cout << "the average of the vector is " << averageOfTheVector <<endl;
+
 
     return 0;
 }
@@ -24,4 +27,15 @@ for(int i=0;i<myVector.size();i++){
     sum+=myVector.at(i);
 }
 return sum;
+}
+float getAverage(vector<int> myVector){
+    float average=0.0;
+    int sum=0;
+    for(int i=0;i<myVector.size();i++){
+    sum+=myVector.at(i);
+}
+
+ average=(float)sum/myVector.size();  
+ 
+    return average;
 }
