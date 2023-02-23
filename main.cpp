@@ -5,6 +5,8 @@ using namespace std;
 
 int getSum(vector<int> myVector);
 
+int getMin(vector<int> myVector);
+
 int main()
 {
     vector<int> toBePassedVector ;
@@ -14,6 +16,8 @@ int main()
      }
      int sumOfTheVector=getSum(toBePassedVector);
      cout << "the sum of the vector is " << sumOfTheVector <<endl;
+    int minimumOfTheVector=getMin(toBePassedVector);
+         cout << "the minimum of the vector is " << minimumOfTheVector <<endl;
 
     return 0;
 }
@@ -24,4 +28,13 @@ for(int i=0;i<myVector.size();i++){
     sum+=myVector.at(i);
 }
 return sum;
+}
+int getMin(vector<int> myVector){
+    int min=myVector.at(0);
+    for(int i=0;i<myVector.size();i++){
+    if(myVector.at(i)<min){
+        min=myVector.at(i);
+    }
+}
+return min;
 }
