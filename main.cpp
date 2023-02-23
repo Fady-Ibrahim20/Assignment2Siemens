@@ -5,6 +5,10 @@ using namespace std;
 
 int getSum(vector<int> myVector);
 float getAverage(vector<int> myVector);
+
+
+int getMin(vector<int> myVector);
+
 int main()
 {
     vector<int> toBePassedVector ;
@@ -17,6 +21,8 @@ int main()
      float averageOfTheVector= getAverage(toBePassedVector);
     cout << "the average of the vector is " << averageOfTheVector <<endl;
 
+    int minimumOfTheVector=getMin(toBePassedVector);
+         cout << "the minimum of the vector is " << minimumOfTheVector <<endl;
 
     return 0;
 }
@@ -38,4 +44,13 @@ float getAverage(vector<int> myVector){
  average=(float)sum/myVector.size();  
  
     return average;
+}
+int getMin(vector<int> myVector){
+    int min=myVector.at(0);
+    for(int i=0;i<myVector.size();i++){
+    if(myVector.at(i)<min){
+        min=myVector.at(i);
+    }
+}
+return min;
 }
